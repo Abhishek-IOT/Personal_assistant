@@ -4,7 +4,6 @@ import datetime
 import pyttsx3
 
 # for taking the voice from the window and the laptop
-
 engine = pyttsx3.init('Sapi5')
 # sapi 5 voice is the default voice for windows
 voices = engine.getProperty('voices')
