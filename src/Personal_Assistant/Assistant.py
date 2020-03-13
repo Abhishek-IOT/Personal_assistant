@@ -46,3 +46,7 @@ def takeCommand():
             print("Say that again sir")
             return "None"
         return Query
+
+
+if __name__ == '__main__':
+    pass
