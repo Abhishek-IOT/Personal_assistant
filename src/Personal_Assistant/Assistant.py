@@ -1,6 +1,6 @@
 """"
 User=Abhishek Srivastav
-Github UserName=Abhishek=IOT
+Github UserName=Abhishek-IOT
 Personal Assistant project
 
 """
