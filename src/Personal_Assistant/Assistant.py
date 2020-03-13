@@ -49,4 +49,4 @@ def takeCommand():
 
 
 if __name__ == '__main__':
-    pass
+    WishMe()
