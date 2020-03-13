@@ -2,8 +2,9 @@ import datetime
 
 # for taking the time for wishMe method
 import pyttsx3
-
 # for taking the voice from the window and the laptop
+import speech_recognition as sr
+
 engine = pyttsx3.init('Sapi5')
 # sapi 5 voice is the default voice for windows
 voices = engine.getProperty('voices')
@@ -27,3 +28,12 @@ def WishMe():
         speak("Good afternoon sir")
     else:
         speak('Good evening sir')
+    speak('I am Jarvis   .Please tell how may I help u Sir')
+
+
+def takeCommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening')
+        r.pause_threshold = 1
+        audio = r.listen(source)
