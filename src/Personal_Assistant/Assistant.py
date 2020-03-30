@@ -11,7 +11,9 @@ import pyttsx3
 # for taking the voice from the window and the laptop
 import speech_recognition as sr
 
-engine = pyttsx3.init('Sapi5')
+# engine=pyttsx3.init('dummy')
+# if sapi5 is giving any error you can first try with the dummy parameter and then with the sapi5 parameter and also remember the case used in it
+engine = pyttsx3.init('sapi5')
 # sapi 5 voice is the default voice for windows
 voices = engine.getProperty('voices')
 # getter method for the pyttsx3
