@@ -42,7 +42,7 @@ def WishMe():
 def takeCommand():
 # this method is for taking the commands and recognizing the command
     r = sr.Recognizer()
-#from the speech_Recognition module we will use the reconizer method for recognizing
+# from the speech_Recognition module we will use the recongizer method for recognizing
     with sr.Microphone() as source:
         #from the speech_Recognition module we will use the Microphone module for listening the command
         print('Listening')
@@ -65,3 +65,4 @@ def takeCommand():
 
 if __name__ == '__main__':  # main method for executing the functions
     WishMe()
+    takeCommand()
