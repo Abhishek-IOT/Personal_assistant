@@ -57,15 +57,25 @@ def takeCommand():
         try:
             print("Recognizing")
             Query = r.recognize_google(audio, language='en-in')
-            #for listening the command in indian english
+            # for listening the command in indian english
             print("the query is printed='", Query, "'")
-            #for printing the query or the command that we give
+            # for printing the query or the command that we give
         except Exception as e:
             print(
                 e)  # this method is for handling the exception and so that assistant can ask for telling again the command
             print("Say that again sir")
             return "None"
         return Query
+
+
+def telltime():
+    time = str(datetime.datetime.now())
+    print(time)
+    hour = time[11:13]
+    min = time[14:16]
+    sec = time[18:19]
+    print(hour + min + sec)
+    speak(hour + "Hours" + min + "Minutes" + sec + "Seconds sir")
 
 
 if __name__ == '__main__':  # main method for executing the functions
@@ -97,7 +107,8 @@ if __name__ == '__main__':  # main method for executing the functions
         speak("Opening the cousresite.com sir")
         webbrowser.open("https://blackboard.coursesites.com/")
         speak("Goodluck sir for studies")
-
+    elif 'time' in query:
+        telltime()
 
 
     elif "jarvis bye" in query:
