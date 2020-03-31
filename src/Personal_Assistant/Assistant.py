@@ -10,6 +10,7 @@ import datetime
 import pyttsx3
 # for taking the voice from the window and the laptop
 import speech_recognition as sr
+import wikipedia
 
 # engine=pyttsx3.init('dummy')
 # if sapi5 is giving any error you can first try with the dummy parameter and then with the sapi5 parameter and also remember the case used in it
@@ -66,3 +67,9 @@ def takeCommand():
 if __name__ == '__main__':  # main method for executing the functions
     WishMe()
     query = takeCommand().lower()
+    if 'wikipedia' in query:
+        speak("Checking in the wikipedia Sir")
+        query = query.replace("wikipedia", "")
+        result = wikipedia.summary(query, sentences=4)
+        speak("According to wikipedia Sir")
+        speak(result)
