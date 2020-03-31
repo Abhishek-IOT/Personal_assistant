@@ -65,4 +65,4 @@ def takeCommand():
 
 if __name__ == '__main__':  # main method for executing the functions
     WishMe()
-    query = takeCommand()
+    query = takeCommand().lower()
