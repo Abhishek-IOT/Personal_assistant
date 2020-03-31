@@ -8,6 +8,7 @@ Personal Assistant project
 import datetime
 # importing the webbrowser module for opening the webbrowser
 import webbrowser
+from datetime import date
 
 # for taking the time for wishMe method
 import pyttsx3
@@ -68,6 +69,25 @@ def takeCommand():
         return Query
 
 
+def telldate():
+    day = str(date.today())
+    print(day)
+    todaydate = day[8:10]
+    this_Month = day[5:7]
+    print(todaydate + "")
+    # print(this_Month)
+    this_year = day[0:4]
+    # print(this_year)
+
+    if todaydate == '1':
+        dateno = "First"
+    if todaydate == '21':
+        dateno = "Twenty First"
+    if todaydate == '31':
+        dateno = "Thirty First"
+    speak(dateno)
+
+
 def telltime():
     time = str(datetime.datetime.now())
     print(time)
@@ -109,6 +129,8 @@ if __name__ == '__main__':  # main method for executing the functions
         speak("Goodluck sir for studies")
     elif 'time' in query:
         telltime()
+    elif 'date' in query:
+        telldate()
 
 
     elif "jarvis bye" in query:
