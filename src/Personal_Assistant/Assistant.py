@@ -4,6 +4,7 @@ Github UserName=Abhishek-IOT
 Personal Assistant project
 
 """
+
 import datetime
 # importing the webbrowser module for opening the webbrowser
 import webbrowser
@@ -92,6 +93,13 @@ if __name__ == '__main__':  # main method for executing the functions
         speak("Telling about the news sir")
         webbrowser.open("https://www.indiatvnews.com/")
     # speak(webbrowser.open("https://www.indiatvnews.com/"))
+    elif 'open online classes' in query:
+        speak("Opening the cousresite.com sir")
+        webbrowser.open("https://blackboard.coursesites.com/")
+        speak("Goodluck sir for studies")
+
+
+
     elif "jarvis bye" in query:
         speak("Bye sir  Have a very good day sir.Take care")
         exit()
