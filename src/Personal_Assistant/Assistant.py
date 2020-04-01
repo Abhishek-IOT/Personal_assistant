@@ -5,46 +5,42 @@ Personal Assistant project
 
 """
 
-import datetime
 # importing the webbrowser module for opening the webbrowser
-import webbrowser
-from datetime import date
 
 # for taking the time for wishMe method
-import pyttsx3
+# import pyttsx3
 # for taking the voice from the window and the laptop
-import speech_recognition as sr
 # importing the wikipedia module for having a search from wikipedia
-import wikipedia
 
 # engine=pyttsx3.init('dummy')
 # if sapi5 is giving any error you can first try with the dummy parameter and then with the sapi5 parameter and also remember the case used in it
-engine = pyttsx3.init('sapi5')
+# engine = pyttsx3.init('sapi5')
 # sapi 5 voice is the default voice for windows
-voices = engine.getProperty('voices')
+# voices = engine.getProperty('voices')
 # getter method for the pyttsx3
-engine.setProperty('voice', voices[0].id)
+# engine.setProperty('voice', voices[0].id)
 
 
 # setter method for the pyttsx3
 
 
-def speak(audio):
-    engine.say(audio)  # Method for the speaking of the the assistant
-    engine.runAndWait()
+# def speak(audio):
+#   engine.say(audio)  # Method for the speaking of the the assistant
+#  engine.runAndWait()
 
 
-def WishMe():
-    hour = int(datetime.datetime.now().hour)
-    if hour >= 0 and hour < 12:  # Method for Wishing the master
-        speak('Good morning sir')
-    elif hour >= 12 and hour < 18:
-        speak("Good afternoon sir")
-    else:
-        speak('Good evening sir')
-    speak('I am Jarvis   .Please tell how may I help u Sir')
+# def WishMe():
+#   hour = int(datetime.datetime.now().hour)
+#   if hour >= 0 and hour < 12:  # Method for Wishing the master
+#      speak('Good morning sir')
+# elif hour >= 12 and hour < 18:
+#    speak("Good afternoon sir")
+# else:
+#   speak('Good evening sir')
+# speak('I am Jarvis   .Please tell how may I help u Sir')
+from src.Personal_Assistant.Speaking import Speaking
 
-
+"""
 def takeCommand():
 # this method is for taking the commands and recognizing the command
     r = sr.Recognizer()
@@ -140,8 +136,11 @@ def telltime():
 
 
 
-
+"""
 if __name__ == '__main__':  # main method for executing the functions
+     speaking = Speaking()
+
+"""
     WishMe()
     query = takeCommand().lower()
     if 'wikipedia' in query:
@@ -176,18 +175,14 @@ if __name__ == '__main__':  # main method for executing the functions
         telldate()
     elif 'set reminder' in query:
         speak("at which hour you want to set the reminder sir")
-        # speak("tell us the hour sir")
+        #speak("tell us the hour sir")
         query = takeCommand().lower()
-        dixtionaryfornumbers = {'one': '01', 'two': '02', 'three': '03', 'four': '04', 'five': '5', 'six': '6',
-                                'seven': '7', 'eight': '8', 'nine': '9', 'ten': '10'}
-        for i, j in dixtionaryfornumbers.items():
-            if i in query:
-                hour = j
-                speak("Setting the alarm sir at" + i + "Sir")
-                set_Reminder(hour)
+        
 
 
 
     elif "jarvis bye" in query:
         speak("Bye sir  Have a very good day sir.Take care")
         exit()
+    
+    """
