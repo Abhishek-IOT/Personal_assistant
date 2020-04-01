@@ -69,13 +69,22 @@ def takeCommand():
         return Query
 
 
+def set_Reminder(userhour, userMin):
+    time = str(datetime.datetime.now())
+    print(time)
+    hour = time[11:13]
+    min = time[14:16]
+    if userhour == hour and userMin == min:
+        speak("Sir your reminder")
+
+
 def telldate():
     day = str(date.today())
     print(day)
     todaydate = day[8:10]
     this_Month = day[5:7]
-    print(todaydate + "")
-    print(this_Month)
+    # print(todaydate + "")
+    # print(this_Month)
     this_year = day[0:4]
     # print(this_year)
 
@@ -115,7 +124,7 @@ def telldate():
         month = 'December'
 
     speak(dateno + month + this_year)
-
+    print(todaydate)
 
 def telltime():
     time = str(datetime.datetime.now())
@@ -160,6 +169,9 @@ if __name__ == '__main__':  # main method for executing the functions
         telltime()
     elif 'date' in query:
         telldate()
+    elif 'set reminder' in query:
+        speak("at which hour you want to set the reminder sir")
+
 
 
     elif "jarvis bye" in query:
