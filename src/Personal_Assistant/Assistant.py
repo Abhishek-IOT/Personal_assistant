@@ -5,6 +5,7 @@ Personal Assistant project
 
 """
 import datetime
+import webbrowser
 
 # for taking the time for wishMe method
 import pyttsx3
@@ -73,3 +74,6 @@ if __name__ == '__main__':  # main method for executing the functions
         result = wikipedia.summary(query, sentences=4)
         speak("According to wikipedia Sir")
         speak(result)
+    elif 'open youtube' in query:
+        speak("Opening the youtube sir")
+        webbrowser.open("www.youtube.com")
