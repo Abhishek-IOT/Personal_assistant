@@ -70,12 +70,12 @@ def takeCommand():
 
 
 
-def set_Reminder(userhour, userMin):
+def set_Reminder(userhour):
     time = str(datetime.datetime.now())
     print(time)
     hour = time[11:13]
     min = time[14:16]
-    if userhour == hour and userMin == min:
+    if userhour == hour:
         speak("Sir your reminder")
 
 
@@ -138,31 +138,7 @@ def telltime():
     speak(hour + "Hours" + min + "Minutes" + sec + "Seconds sir")
 
 
-def todigit(digit):
-    if digit == 'one':
-        digit = 1
-    if digit == 'two':
-        digit = 2
-    if digit == 'three':
-        digit = 3
-    if digit == 'four':
-        digit = 4
-    if digit == 'five':
-        digit = 5
-    if digit == 'six':
-        digit = 6
-    if digit == 'seven':
-        digit = 7
-    if digit == 'eight':
-        digit = 8
-    if digit == 'nine':
-        digit = 9
-    if digit == 'ten':
-        digit = 10
-    if digit == 'eleven':
-        digit = 11
-    if digit == 'tweleve':
-        digit = 12
+
 
 
 if __name__ == '__main__':  # main method for executing the functions
@@ -200,8 +176,16 @@ if __name__ == '__main__':  # main method for executing the functions
         telldate()
     elif 'set reminder' in query:
         speak("at which hour you want to set the reminder sir")
-        speak("tell us the hour sir")
+        # speak("tell us the hour sir")
         query = takeCommand().lower()
+        dixtionaryfornumbers = {'one': '01', 'two': '02', 'three': '03', 'four': '04', 'five': '5', 'six': '6',
+                                'seven': '7', 'eight': '8', 'nine': '9', 'ten': '10'}
+        for i, j in dixtionaryfornumbers.items():
+            if i in query:
+                hour = j
+                speak("Setting the alarm sir at" + i + "Sir")
+                set_Reminder(hour)
+
 
 
     elif "jarvis bye" in query:
