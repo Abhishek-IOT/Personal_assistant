@@ -5,12 +5,14 @@ Personal Assistant project
 
 """
 import datetime
+# importing the webbrowser module for opening the webbrowser
 import webbrowser
 
 # for taking the time for wishMe method
 import pyttsx3
 # for taking the voice from the window and the laptop
 import speech_recognition as sr
+# importing the wikipedia module for having a search from wikipedia
 import wikipedia
 
 # engine=pyttsx3.init('dummy')
