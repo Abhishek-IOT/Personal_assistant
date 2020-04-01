@@ -83,4 +83,6 @@ if __name__ == '__main__':  # main method for executing the functions
     elif 'open facebook' in query:
         speak("Opening facebook sir")
         webbrowser.open("facebook.com")
-
+    elif 'open geeksforgeeks' in query:
+        speak("Opening geeks for geeks sir ha haha haha")
+        webbrowser.open("geeksforgeeks.com")
