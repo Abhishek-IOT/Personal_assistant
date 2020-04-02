@@ -16,6 +16,7 @@ import webbrowser
 
 import wikipedia
 
+from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
 
 """
@@ -81,15 +82,6 @@ def telldate():
     print(todaydate)
 
 
-def telltime():
-    time = str(datetime.datetime.now())
-    print(time)
-    hour = time[11:13]
-    min = time[14:16]
-    sec = time[18:19]
-    print(hour + min + sec)
-    speak(hour + "Hours" + min + "Minutes" + sec + "Seconds sir")
-
 
 
 
@@ -124,9 +116,9 @@ if __name__ == '__main__':  # main method for executing the functions
         speaking.speak("Opening the cousresite.com sir")
         webbrowser.open("https://blackboard.coursesites.com/")
         speaking.speak("Goodluck sir for studies")
-        """
     elif 'time' in query:
-        telltime()
+        Date.telltime()
+        """
     elif 'date' in query:
         telldate()
     elif 'set reminder' in query:

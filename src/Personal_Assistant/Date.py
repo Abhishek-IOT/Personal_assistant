@@ -3,7 +3,7 @@ import datetime
 from src.Personal_Assistant.Speaking import Speaking
 
 
-class Date(Speaking):
+class Time(Speaking):
     def __int__(self):
         pass
 
