@@ -121,6 +121,9 @@ if __name__ == '__main__':  # main method for executing the functions
     elif 'time' in query:
         time = Time()
         time.tellTime()
+    elif "jarvis bye" in query:
+        speaking.speak("Bye sir  Have a very good day sir.Take care")
+        exit()
 
 """"
     elif 'date' in query:
@@ -130,11 +133,4 @@ if __name__ == '__main__':  # main method for executing the functions
         #speak("tell us the hour sir")
         query = takeCommand().lower()
         
-
-
-
-    elif "jarvis bye" in query:
-        speak("Bye sir  Have a very good day sir.Take care")
-        exit()
-    
-    """
+"""
