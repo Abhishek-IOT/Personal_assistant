@@ -16,6 +16,7 @@ import webbrowser
 
 import wikipedia
 
+from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
 
@@ -125,9 +126,11 @@ if __name__ == '__main__':  # main method for executing the functions
         speaking.speak("Bye sir  Have a very good day sir.Take care")
         exit()
 
-""""
+
     elif 'date' in query:
-        telldate()
+        date = Date()
+        date.telldate()
+""""
     elif 'set reminder' in query:
         speak("at which hour you want to set the reminder sir")
         #speak("tell us the hour sir")
