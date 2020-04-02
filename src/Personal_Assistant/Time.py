@@ -12,4 +12,4 @@ class Time(Speaking):
         print(time)
         hour = time[11:13]
         min = time[14:16]
-        Speaking.speak("The time is sir" + hour + "Hours and" + min + "Minutes")
+        Speaking.speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
