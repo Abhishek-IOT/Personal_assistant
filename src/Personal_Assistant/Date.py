@@ -51,3 +51,6 @@ class Date(Speaking):
             month = 'November'
         if this_Month == '12':
             month = 'December'
+
+        Speaking.speak(self, dateno + month + this_year)
+        print(todaydate)
