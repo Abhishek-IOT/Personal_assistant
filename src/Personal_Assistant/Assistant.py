@@ -84,14 +84,20 @@ if __name__ == '__main__':  # main method for executing the functions
         # speak("tell us the hour sir")
         c = 0
         query = speaking.takeCommand().lower()
-        """
-        for i in range(query.__len__()):
-            print(query[i],c)                  c=c+1
-        """
         userhour = query[0]
         usermin = query[2:4]
         speaking.speak("Setting the reminder at" + userhour + "hour" + usermin + "Minuetes sir")
-        userhour = "0" + userhour
+        list = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+        if userhour in list:
+            userhour = "0" + userhour
+
         time.set_Reminder(userhour, usermin)
         print(userhour)
         print(usermin)
+
+"""
+        for i in range(query.__len__()):
+            print(query[i],c)
+            c=c+1
+"""
+
