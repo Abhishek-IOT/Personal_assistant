@@ -25,16 +25,16 @@ class Time(Speaking):
         time_meridiemrealam = 'a.m'
         if time_meridiem == time_meridiemrealam:
             if userhour == hour and usermin == min:
-                Speaking.speak(self, "the reminder that u said is now sir")
-                music = 'D:\\Music'
-                songs = os.listdir(music)
-                os.startfile(os.path.join(music, songs[0]))
+                self.songs()
         else:
             userhour = userhour + 12
             if userhour == userhour and usermin == usermin:
-                Speaking.speak(self, "the reminder that u said is now sir")
-                music = 'D:\\Music'
-                songs = os.listdir(music)
-                os.startfile(os.path.join(music, songs[0]))
+                self.songs()
         print("the current hour" + hour)
         print("the current min" + min)
+
+    def songs(self):
+        Speaking.speak(self, "the reminder that u said is now sir")
+        music = 'D:\\Music'
+        songs = os.listdir(music)
+        os.startfile(os.path.join(music, songs[0]))
