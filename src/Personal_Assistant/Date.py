@@ -17,15 +17,15 @@ class Date(Speaking):
         this_year = day[0:4]
         # print(this_year)
 
-        if todaydate == '1':
+        if todaydate == '01':
             dateno = "First"
-        if todaydate == '21':
+        elif todaydate == '21':
             dateno = "Twenty First"
-        if todaydate == '31':
+        elif todaydate == '31':
             dateno = "Thirty First"
-        elif todaydate == '2':
+        elif todaydate == '02':
             dateno = "Second"
-        elif todaydate == '3':
+        elif todaydate == '03':
             dateno = "Third"
         elif this_Month == '01':
             month = "January"
@@ -51,7 +51,9 @@ class Date(Speaking):
             month = 'November'
         if this_Month == '12':
             month = 'December'
-
-        Speaking.speak(self, todaydate + month + this_year)
-        print(todaydate)
-        print(dateno)
+        elif todaydate == '03':
+            dateno = "Third"
+        if todaydate == '01' or todaydate == '02' or todaydate == '03' or todaydate == '31' or todaydate == '21':
+            Speaking.speak(self, dateno + month + this_year)
+        else:
+            Speaking.speak(self, todaydate + month + this_year)

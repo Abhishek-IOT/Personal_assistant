@@ -103,7 +103,3 @@ if __name__ == '__main__':  # main method for executing the functions
         time.set_Reminder(userhour, usermin, time_meridiem)
         print("the reminder hour" + userhour)
         print("the reminder min" + usermin)
-
-        for i in range(query.__len__()):
-            print(query[i], c)
-            c = c + 1

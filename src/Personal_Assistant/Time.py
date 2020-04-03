@@ -1,4 +1,5 @@
 import datetime
+import os
 
 from src.Personal_Assistant.Speaking import Speaking
 
@@ -36,6 +37,6 @@ class Time(Speaking):
 
     def songs(self):
         Speaking.speak(self, "the reminder that u said is now sir")
-        # music = 'D:\\Music'
-        # songs = os.listdir(music)
-        # os.startfile(os.path.join(music, songs[0]))
+        music = 'D:\\Music'
+        songs = os.listdir(music)
+        os.startfile(os.path.join(music, songs[0]))
