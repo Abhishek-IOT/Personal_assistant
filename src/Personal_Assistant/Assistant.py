@@ -89,7 +89,7 @@ class Assistant:
                     time_meridiem = query[5:8]
                     print(time_meridiem)
 
-                speaking.speak("Setting the reminder at" + userhour + "hour" + usermin + "Minuetes sir")
+                speaking.speak("Setting the reminder at" + userhour + "hour" + usermin + "Minutes sir")
                 list = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
                 if userhour in list:
                     userhour = "0" + userhour
