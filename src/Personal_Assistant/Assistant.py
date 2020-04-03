@@ -34,63 +34,12 @@ def set_Reminder(userhour):
         speak("Sir your reminder")
 
 
-def telldate():
-    day = str(date.today())
-    print(day)
-    todaydate = day[8:10]
-    this_Month = day[5:7]
-    # print(todaydate + "")
-    # print(this_Month)
-    this_year = day[0:4]
-    # print(this_year)
-
-    if todaydate == '1':
-        dateno = "First"
-    if todaydate == '21':
-        dateno = "Twenty First"
-    if todaydate == '31':
-        dateno = "Thirty First"
-    elif todaydate == '2':
-        dateno = "Second"
-    elif todaydate == '3':
-        dateno = "Third"
-    elif this_Month == '01':
-        month = "January"
-    elif this_Month == '02':
-        month = "February"
-    if this_Month == '03':
-        month = "March"
-    if this_Month == '04':
-        month = "April"
-    if this_Month == '05':
-        month = 'May'
-    if this_Month == '06':
-        month = 'June'
-    if this_Month == '07':
-        month = 'July'
-    if this_Month == '08':
-        month = 'August'
-    if this_Month == '09':
-        month = 'September'
-    if this_Month == '10':
-        month = 'October'
-    if this_Month == '11':
-        month = 'November'
-    if this_Month == '12':
-        month = 'December'
-
-    speak(dateno + month + this_year)
-    print(todaydate)
-
-
-
-
 
 """
 if __name__ == '__main__':  # main method for executing the functions
     speaking = Speaking()
     speaking.WishMe()
-
+    time = Time()
     query = speaking.takeCommand().lower()
     if 'wikipedia' in query:
         speaking.speak("Checking in the wikipedia Sir")
@@ -120,7 +69,6 @@ if __name__ == '__main__':  # main method for executing the functions
         speaking.speak("Goodluck sir for studies")
 
     elif 'time' in query:
-        time = Time()
         time.tellTime()
     elif "jarvis bye" in query:
         speaking.speak("Bye sir  Have a very good day sir.Take care")
@@ -130,10 +78,20 @@ if __name__ == '__main__':  # main method for executing the functions
     elif 'date' in query:
         date = Date()
         date.telldate()
-""""
+
     elif 'set reminder' in query:
-        speak("at which hour you want to set the reminder sir")
-        #speak("tell us the hour sir")
-        query = takeCommand().lower()
-        
-"""
+        speaking.speak("at which hour you want to set the reminder sir")
+        # speak("tell us the hour sir")
+        c = 0
+        query = speaking.takeCommand().lower()
+        """
+        for i in range(query.__len__()):
+            print(query[i],c)                  c=c+1
+        """
+        userhour = query[0]
+        usermin = query[2:4]
+        speaking.speak("Setting the reminder at" + userhour + "hour" + usermin + "Minuetes sir")
+        userhour = "0" + userhour
+        time.set_Reminder(userhour, usermin)
+        print(userhour)
+        print(usermin)
