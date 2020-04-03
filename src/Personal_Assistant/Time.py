@@ -24,5 +24,5 @@ class Time(Speaking):
         if userhour == hour and usermin == min:
             Speaking.speak(self, "the reminder that u said is now sir")
 
-        print("the current time" + hour)
-        print(min)
+        print("the current hour" + hour)
+        print("the current min" + min)

@@ -92,8 +92,8 @@ if __name__ == '__main__':  # main method for executing the functions
             userhour = "0" + userhour
 
         time.set_Reminder(userhour, usermin)
-        print(userhour)
-        print(usermin)
+        print("the reminder hour" + userhour)
+        print("the reminder min" + usermin)
 
 """
         for i in range(query.__len__()):
