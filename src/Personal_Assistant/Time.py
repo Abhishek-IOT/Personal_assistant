@@ -1,5 +1,4 @@
 import datetime
-import os
 
 from src.Personal_Assistant.Speaking import Speaking
 
@@ -26,8 +25,10 @@ class Time(Speaking):
         if time_meridiem == time_meridiemrealam:
             if userhour == hour and usermin == min:
                 self.songs()
-        else:
-            userhour = userhour + 12
+
+        elif time_meridiem == 'p.m':
+            userhour = int(userhour) + 12
+            userhour = str(userhour)
             if userhour == userhour and usermin == usermin:
                 self.songs()
         print("the current hour" + hour)
@@ -35,6 +36,6 @@ class Time(Speaking):
 
     def songs(self):
         Speaking.speak(self, "the reminder that u said is now sir")
-        music = 'D:\\Music'
-        songs = os.listdir(music)
-        os.startfile(os.path.join(music, songs[0]))
+        # music = 'D:\\Music'
+        # songs = os.listdir(music)
+        # os.startfile(os.path.join(music, songs[0]))

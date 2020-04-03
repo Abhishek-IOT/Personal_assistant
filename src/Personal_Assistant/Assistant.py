@@ -89,15 +89,17 @@ if __name__ == '__main__':  # main method for executing the functions
                 userhour = query[0:2]
                 usermin = query[3:5]
                 time_meridiem = query[6:9]
+                print(time_meridiem)
         else:
             userhour = query[0]
             usermin = query[2:4]
+            time_meridiem = query[5:8]
+            print(time_meridiem)
 
         speaking.speak("Setting the reminder at" + userhour + "hour" + usermin + "Minuetes sir")
         list = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
         if userhour in list:
             userhour = "0" + userhour
-
         time.set_Reminder(userhour, usermin, time_meridiem)
         print("the reminder hour" + userhour)
         print("the reminder min" + usermin)
