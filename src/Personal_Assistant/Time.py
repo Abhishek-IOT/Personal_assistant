@@ -1,4 +1,5 @@
 import datetime
+import os
 
 from src.Personal_Assistant.Speaking import Speaking
 
@@ -16,26 +17,32 @@ class Time(Speaking):
 
         Speaking.speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
 
+    def songs(self):
+        Speaking.speak(self, "the reminder that u said is now sir")
+        music = 'D:\\Music'
+        songs = os.listdir(music)
+        os.startfile(os.path.join(music, songs[0]))
+
     def set_Reminder(self, userhour, usermin, time_meridiem):
-        time = str(datetime.datetime.now())
-        print(time)
-        hour = time[11:13]
-        min = time[14:16]
+        timereal = str(datetime.datetime.now())
+        print(timereal)
+
+        hour = timereal[11:13]
+        min = timereal[14:16]
         time_meridiemrealam = 'a.m'
         if time_meridiem == time_meridiemrealam:
             if userhour == hour and usermin == min:
                 self.songs()
+                return True
 
         elif time_meridiem == 'p.m':
             userhour = int(userhour) + 12
             userhour = str(userhour)
             if userhour == userhour and min == usermin:
                 self.songs()
-            print("the current hour" + userhour)
-            print("the current min" + min)
+                return True
 
-    def songs(self):
-        Speaking.speak(self, "the reminder that u said is now sir")
-        # music = 'D:\\Music'
-        # songs = os.listdir(music)
-        # os.startfile(os.path.join(music, songs[0]))
+                print("the current hour" + userhour)
+                print("the current min" + min)
+        if time_meridiem != 'a.m' or time_meridiem != 'p.m' or userhour != hour or usermin != min:
+            print(hour + "     " + min)
