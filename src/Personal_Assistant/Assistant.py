@@ -12,17 +12,15 @@ Personal Assistant project
 # for taking the voice from the window and the laptop
 # importing the wikipedia module for having a search from wikipedia
 
-import webbrowser
-
-import wikipedia
-
-from src.Personal_Assistant.Date import Date
-from src.Personal_Assistant.Speaking import Speaking
-from src.Personal_Assistant.Time import Time
+from src.Personal_Assistant.Take_Query import Take_Query
 
 
 class Assistant:
     if __name__ == '__main__':  # main method for executing the functions
+        takequery = Take_Query()
+        takequery.query()
+
+        """"
         speaking = Speaking()
         speaking.WishMe()
         time = Time()
@@ -98,7 +96,8 @@ class Assistant:
                         break
                     else:
                         continue
-
+                        speaking.takeCommand().lower()
                 print("the reminder hour" + userhour)
                 print("the reminder min" + usermin)
                 continue
+"""

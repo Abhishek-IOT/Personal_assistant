@@ -23,9 +23,9 @@ class Time(Speaking):
         songs = os.listdir(music)
         os.startfile(os.path.join(music, songs[0]))
 
-    def set_Reminder(self, userhour, usermin, time_meridiem):
+    def get_Reminder(self, userhour, usermin, time_meridiem):
         timereal = str(datetime.datetime.now())
-        print(timereal)
+        #        print(timereal)
 
         hour = timereal[11:13]
         min = timereal[14:16]
@@ -42,7 +42,7 @@ class Time(Speaking):
                 self.songs()
                 return True
 
-                print("the current hour" + userhour)
-                print("the current min" + min)
-        if time_meridiem != 'a.m' or time_meridiem != 'p.m' or userhour != hour or usermin != min:
-            print(hour + "     " + min)
+        #               print("the current hour" + userhour)
+        #              print("the current min" + min)
+        elif time_meridiem != 'a.m' or time_meridiem != 'p.m' or userhour != hour or usermin != min:
+            print("The time meridian2222222" + hour + "     " + min)
