@@ -1,3 +1,6 @@
+from src.Personal_Assistant.Date import Date
+import webbrowser
+
 import wikipedia
 
 from src.Personal_Assistant.Date import Date
@@ -57,4 +60,42 @@ class Take_Query(Time, Date):
                 # print("the reminder hour" + userhour)
                 # print("the reminder min" + usermin)
 
+                continue
+
+            elif 'open youtube' in query:
+                speaking.speak("Opening the youtube sir")
+                webbrowser.open("www.youtube.com")
+                continue
+            elif 'open google' in query:
+                speaking.speak("Opening the google sir")
+                webbrowser.open("google.com")
+                continue
+            elif 'open facebook' in query:
+                speaking.speak("Opening facebook sir")
+                webbrowser.open("facebook.com")
+                continue
+            elif 'open geeksforgeeks' in query:
+                speaking.speak("Opening geeks for geeks sir")
+                webbrowser.open("geeksforgeeks.com")
+                continue
+            elif 'open the news' in query:
+                speaking.speak("Telling about the news sir")
+                webbrowser.open("https://www.indiatvnews.com/")
+                continue  # speak(webbrowser.open("https://www.indiatvnews.com/"))
+            elif 'open online classes' in query:
+                speaking.speak("Opening the cousresite.com sir")
+                webbrowser.open("https://blackboard.coursesites.com/")
+                speaking.speak("Goodluck sir for studies")
+                continue
+            elif 'time' in query:
+                time.tellTime()
+                continue
+            elif "jarvis bye" in query:
+                speaking.speak("Bye sir  Have a very good day sir.Take care")
+                exit()
+
+
+            elif 'date' in query:
+                date = Date()
+                date.telldate()
                 continue
