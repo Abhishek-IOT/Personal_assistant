@@ -1,0 +1,1 @@
+class Take_Query:
