@@ -12,12 +12,12 @@ class Take_Query(Time, Date):
 
     def query(self):
         speaking = Speaking()
-        #  speaking.WishMe()
+        speaking.WishMe()
         time = Time()
         while (True):
             query = speaking.takeCommand().lower()
             if 'wikipedia' in query:
-                print(userhour)
+
                 speaking.speak("Checking in the wikipedia Sir")
                 query = query.replace("wikipedia", "")
                 result = wikipedia.summary(query, sentences=4)
@@ -26,7 +26,7 @@ class Take_Query(Time, Date):
                 continue
             elif 'set reminder' in query:
                 speaking.speak("at which hour you want to set the reminder sir")
-                # speak("tell us thea hour sir")
+
                 query = speaking.takeCommand().lower()
                 if query[0] == '1':
                     if query[1] == '2' or query[1] == '0' or query[1] == '1':
@@ -102,7 +102,7 @@ class Take_Query(Time, Date):
 
     def query2(self, userhour, usermin, time_merdiem):
         speaking = Speaking()
-        #  speaking.WishMe()
+        speaking.WishMe()
         time = Time()
 
         timereal = str(datetime.datetime.now())
