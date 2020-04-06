@@ -160,6 +160,34 @@ class Take_Query(Time, Date):
                             else:
                                 self.query(userhour, usermin)
                                 continue
+                elif 'open youtube' in query:
+                    speaking.speak("Opening the youtube sir")
+                    webbrowser.open("www.youtube.com")
+                    continue
+                elif 'open google' in query:
+                    speaking.speak("Opening the google sir")
+                    webbrowser.open("google.com")
+                    continue
+                elif 'open facebook' in query:
+                    speaking.speak("Opening facebook sir")
+                    webbrowser.open("facebook.com")
+                    continue
+                elif 'open geeksforgeeks' in query:
+                    speaking.speak("Opening geeks for geeks sir")
+                    webbrowser.open("geeksforgeeks.com")
+                    continue
+                elif 'open the news' in query:
+                    speaking.speak("Telling about the news sir")
+                    webbrowser.open("https://www.indiatvnews.com/")
+                    continue  # speak(webbrowser.open("https://www.indiatvnews.com/"))
+                elif 'open online classes' in query:
+                    speaking.speak("Opening the cousresite.com sir")
+                    webbrowser.open("https://blackboard.coursesites.com/")
+                    speaking.speak("Goodluck sir for studies")
+                    continue
+
+
+
             else:
                 print("this is alarm time sir")
                 speaking.speak("Alarm time sir")
