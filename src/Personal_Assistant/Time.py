@@ -25,7 +25,7 @@ class Time(Speaking):
 
     def get_Reminder(self, userhour, usermin, time_meridiem):
         timereal = str(datetime.datetime.now())
-        #        print(timereal)
+#        print(timereal)
 
         hour = timereal[11:13]
         min = timereal[14:16]

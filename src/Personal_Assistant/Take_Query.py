@@ -1,4 +1,4 @@
-from src.Personal_Assistant.Date import Date
+import datetime
 import webbrowser
 
 import wikipedia
@@ -99,3 +99,68 @@ class Take_Query(Time, Date):
                 date = Date()
                 date.telldate()
                 continue
+
+    def query2(self, userhour, usermin, time_merdiem):
+        speaking = Speaking()
+        #  speaking.WishMe()
+        time = Time()
+
+        timereal = str(datetime.datetime.now())
+        if time_merdiem == 'p.m':
+            userhour = int(userhour) + 12
+            userhour = str(userhour)
+
+        hour = timereal[11:13]
+        min = timereal[14:16]
+        b = True
+        while (b):
+
+            timereal = str(datetime.datetime.now())
+            hour = timereal[11:13]
+            min = timereal[14:16]
+
+            # print("The userhour"+userhour)
+            print("The alarm min     " + userhour + "       " + usermin)
+            print("The current min  " + hour + "       " + min)
+            if (hour != userhour or min != usermin):
+                query = speaking.takeCommand().lower()
+                if 'wikipedia' in query:
+                    print(userhour)
+                    speaking.speak("Checking in the wikipedia Sir")
+                    query = query.replace("wikipedia", "")
+                    result = wikipedia.summary(query, sentences=4)
+                    speaking.speak("According to wikipedia Sir")
+                    speaking.speak(result)
+                    continue
+                elif 'set reminder' in query:
+                    speaking.speak("at which hour you want to set the reminder sir")
+                    # speak("tell us thea hour sir")
+                    query = speaking.takeCommand().lower()
+                    if query[0] == '1':
+                        if query[1] == '2' or query[1] == '0' or query[1] == '1':
+                            userhour = query[0:2]
+                            usermin = query[3:5]
+                            time_meridiem = query[6:9]
+                            print(time_meridiem)
+                            print(usermin)
+                            time.get_Reminder(userhour, usermin, time_meridiem)
+                    else:
+                        userhour = query[0]
+                        usermin = query[2:4]
+                        time_meridiem = query[5:8]
+                        print(time_meridiem)
+                        speaking.speak("The Alarm is set at" + userhour + "hours" + usermin + "Minutes Sir")
+                        print("The Alarm is set at     " + userhour + "    hours     " + usermin + "       Minutes Sir")
+                        list = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+                        if userhour in list:
+                            userhour = "0" + userhour
+                        while (True):
+                            if (time.get_Reminder(userhour, usermin, time_meridiem) == True):
+                                break
+                            else:
+                                self.query(userhour, usermin)
+                                continue
+            else:
+                print("this is alarm time sir")
+                speaking.speak("Alarm time sir")
+                b = False
