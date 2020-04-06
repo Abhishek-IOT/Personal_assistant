@@ -14,6 +14,7 @@ class Take_Query(Time, Date):
         speaking = Speaking()
         speaking.WishMe()
         time = Time()
+        date = Date()
         while (True):
             query = speaking.takeCommand().lower()
             if 'wikipedia' in query:
@@ -96,7 +97,7 @@ class Take_Query(Time, Date):
 
 
             elif 'date' in query:
-                date = Date()
+
                 date.telldate()
                 continue
 
