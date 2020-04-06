@@ -105,13 +105,14 @@ class Take_Query(Time, Date):
 
     def query2(self, userhour, usermin, time_merdiem):
         speaking = Speaking()
-        speaking.WishMe()
         time = Time()
 
         timereal = str(datetime.datetime.now())
         if time_merdiem == 'p.m':
             userhour = int(userhour) + 12
             userhour = str(userhour)
+        if time_merdiem == 'a.m':
+            pass
 
         hour = timereal[11:13]
         min = timereal[14:16]
