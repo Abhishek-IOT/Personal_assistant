@@ -94,6 +94,8 @@ class Take_Query(Time, Date):
             elif "jarvis bye" in query:
                 speaking.speak("Bye sir  Have a very good day sir.Take care")
                 exit()
+            elif 'day' in query:
+                date.tellDay()
 
 
             elif 'date' in query:
@@ -135,6 +137,7 @@ class Take_Query(Time, Date):
                     continue
                 elif 'set reminder' in query:
                     speaking.speak("at which hour you want to set the reminder sir")
+                    date = Date()
                     # speak("tell us thea hour sir")
                     query = speaking.takeCommand().lower()
                     if query[0] == '1':
@@ -186,7 +189,8 @@ class Take_Query(Time, Date):
                     webbrowser.open("https://blackboard.coursesites.com/")
                     speaking.speak("Goodluck sir for studies")
                     continue
-
+                elif 'day' in query:
+                    date.tellDay()
 
 
             else:
