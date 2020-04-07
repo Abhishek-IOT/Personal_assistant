@@ -36,7 +36,7 @@ class Speaking():
         with sr.Microphone() as source:
             # from the speech_Recognition module we will use the Microphone module for listening the command
             print('Listening')
-                r.pause_threshold = 0.7  # seconds of non-speaking audio before a phrase is considered complete
+            r.pause_threshold = 0.7  # seconds of non-speaking audio before a phrase is considered complete
             audio = r.listen(source)
             try:
                 print("Recognizing")
