@@ -66,3 +66,30 @@ class Date(Speaking):
             Speaking.speak(self, dateno + month + this_year)
         else:
             Speaking.speak(self, todaydate + month + this_year)
+
+    def No_of_odd_days_in_year(self, UserYear):
+        year2 = UserYear[2:4]
+        year1 = UserYear[0:2] + '00'
+        # year2=year[3:5]
+        print("Year1=", year1)
+        print("Year2=", year2)
+        deduced_year = int(year1)
+        while (True):
+            deduced_year = deduced_year - 400
+            #  print(deduced_year)
+            if deduced_year == 100:
+                no_of_odd_days_inyear = 5
+                break
+            if deduced_year == 200:
+                no_of_odd_days_inyear = 3
+                break
+            if deduced_year == 300:
+                no_of_odd_days_inyear = 1
+                break
+            if deduced_year == 400:
+                no_of_odd_days_inyear = 0
+                break
+            if deduced_year != 400 or deduced_year != 300 or deduced_year != 200 or deduced_year != 100:
+                continue
+            if UserYear == '2000':
+                no_of_odd_days_inyear = no_of_odd_days_inyear + 1
