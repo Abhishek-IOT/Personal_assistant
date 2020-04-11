@@ -208,5 +208,12 @@ class Take_Query(Time, Date):
             print("Invalid Month sir")
             speakig.speak("The month that you have given is invalid sir")
             return False
+        if Usermonth == 'february':
+            if int(year) % 4 == 0 and int(year) % 400 == 0 and int(date) > 29:
+                return False
+                speakig.speak("Invalid year Sir")
+            elif int(date) > 28:
+                speakig.speak("Invalid year Sir")
+                return False
         else:
             return True
