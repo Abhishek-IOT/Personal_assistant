@@ -91,5 +91,29 @@ class Date(Speaking):
                 break
             if deduced_year != 400 or deduced_year != 300 or deduced_year != 200 or deduced_year != 100:
                 continue
-            if UserYear == '2000':
-                no_of_odd_days_inyear = no_of_odd_days_inyear + 1
+        if UserYear == '2000':
+            no_of_odd_days_inyear = no_of_odd_days_inyear + 1
+        yearspassed = int(year2) - 1
+        if year2 == '00':
+            yearspassed = int(UserYear) - 1
+            print("the yearspass22222===", yearspassed)
+            print(type(yearspassed))
+            yearspassed2 = str(yearspassed)
+            yearspassed2 = yearspassed2[2:4]
+            print("Yearsassdskjshdsajsadsdajasdkjasdkljasdkjsd", yearspassed2)
+            divisor = int(yearspassed2) // 4
+            print(divisor, "divisor")
+            divisor2 = divisor * 2
+            print(divisor2, "tota;divisor")
+            reminder = int(yearspassed2) - divisor
+            print(reminder)
+        else:
+            print(yearspassed)
+            divisor = yearspassed // 4
+            divisor2 = divisor * 2
+            print("The years passed", divisor)
+            reminder = yearspassed - divisor
+            print("the reminder years=", reminder)
+        total_odd_days = (divisor2 + reminder) % 7
+        print("The total no of odd days =", total_odd_days)
+        return no_of_odd_days_inyear, total_odd_days
