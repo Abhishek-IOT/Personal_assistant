@@ -62,14 +62,17 @@ class Take_Query(Time, Date):
                 exit()
             elif "which day" in query:
                 speaking.speak("Tell me the date sir")
-                Date_of_the_user = speaking.takeCommand()
+                Date_of_the_user = speaking.takeCommand().strip()
                 speaking.speak("Now tell me about the month sir")
-                Month_of_User = speaking.takeCommand()
+                Month_of_User = speaking.takeCommand().lower().strip()
                 speaking.speak("Now tell me about the year sir")
-                Year_of_the_user = speaking.takeCommand()
-                self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)
-                speaking.speak("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
-                print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                Year_of_the_user = speaking.takeCommand().strip()
+                if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)) == True:
+                    speaking.speak(
+                        "According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                    print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                else:
+                    print("Soryy")
             elif 'day' in query:
                 date.tellDay()
 
@@ -193,7 +196,17 @@ class Take_Query(Time, Date):
         if int(date) < 0 or int(date) > 31:
             print("the date is invalid sir")
             speakig.speak("the date is invalid sir")
+            return False
         if len(year) > 4:
             print(len(year))
             print("Invalid year sir")
             speakig.speak("Invalid year sir")
+            return False
+        list_Month = {'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october',
+                      'november', 'december'}
+        if Usermonth not in list_Month:
+            print("Invalid Month sir")
+            speakig.speak("The month that you have given is invalid sir")
+            return False
+        else:
+            return True
