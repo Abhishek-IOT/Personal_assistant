@@ -116,4 +116,4 @@ class Date(Speaking):
             print("the reminder years=", reminder)
         total_odd_days = (divisor2 + reminder) % 7
         print("The total no of odd days =", total_odd_days)
-        return no_of_odd_days_inyear, total_odd_days
+        return no_of_odd_days_inyear + total_odd_days
