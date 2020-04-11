@@ -70,10 +70,14 @@ class Take_Query(Time, Date):
                 Year_of_the_user = speaking.takeCommand().strip()
                 Hello = date.No_of_odd_days_in_year(Year_of_the_user)
                 Hello2 = date.No_of_Odd_Days_inMonths(Month_of_User, Year_of_the_user, Date_of_the_user)
-                if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)) == True:
+                print(Hello2)
+                days = (Hello2 + Hello) % 7
+
+                if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)):
                     speaking.speak(
                         "According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
                     print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                    self.tell_days(days)
                 else:
                     print("Soryy")
             elif 'day' in query:
@@ -220,3 +224,11 @@ class Take_Query(Time, Date):
                 return False
         else:
             return True
+
+    def tell_days(self, days):
+        dict_day = {1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'thursday', 5: 'friday', 6: 'saturday', 7: 'sunday',
+                    0: 'sunday'}
+        if days in dict_day.keys():
+            days = dict_day[days]
+            #  print(dict_day[days])
+            Speaking.speak(self, "The days is " + days)

@@ -119,30 +119,31 @@ class Date(Speaking):
         return no_of_odd_days_inyear + total_odd_days
 
     def No_of_Odd_Days_inMonths(self, month, year, date):
+        days = int(date)
         if month == 'january':
-            no_of_odd_days_inmonths = date
+            no_of_odd_days_inmonths = days
         if month == 'february':
-            no_of_odd_days_inmonths = date + 31
+            no_of_odd_days_inmonths = days + 31
         if month == 'march':
-            no_of_odd_days_inmonths = date + 59
+            no_of_odd_days_inmonths = days + 59
         if month == 'april':
-            no_of_odd_days_inmonths = date + 90
+            no_of_odd_days_inmonths = days + 90
         if month == 'may':
-            no_of_odd_days_inmonths = date + 120
+            no_of_odd_days_inmonths = days + 120
         if month == 'june':
-            no_of_odd_days_inmonths = date + 151
+            no_of_odd_days_inmonths = days + 151
         if month == 'july':
-            no_of_odd_days_inmonths = date + 181
+            no_of_odd_days_inmonths = days + 181
         if month == 'august':
-            no_of_odd_days_inmonths = date + 212
+            no_of_odd_days_inmonths = days + 212
         if month == 'september':
-            no_of_odd_days_inmonths = date + 242
+            no_of_odd_days_inmonths = days + 242
         if month == 'october':
-            no_of_odd_days_inmonths = date + 273
+            no_of_odd_days_inmonths = days + 273
         if month == 'november':
-            no_of_odd_days_inmonths = date + 303
+            no_of_odd_days_inmonths = days + 303
         if month == 'december':
-            no_of_odd_days_inmonths = date + 334
+            no_of_odd_days_inmonths = days + 334
         if int(year) % 400 == 0 or int(year) % 4 == 0:
             if month != 'january' and month != 'february':
                 print(type(month))
