@@ -69,7 +69,7 @@ class Take_Query(Time, Date):
                 speaking.speak("Now tell me about the year sir")
                 Year_of_the_user = speaking.takeCommand().strip()
                 Hello = date.No_of_odd_days_in_year(Year_of_the_user)
-                print(Hello)
+                Hello2 = date.No_of_Odd_Days_inMonths(Month_of_User, Year_of_the_user, Date_of_the_user)
                 if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)) == True:
                     speaking.speak(
                         "According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)

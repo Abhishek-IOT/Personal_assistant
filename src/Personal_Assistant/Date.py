@@ -117,3 +117,40 @@ class Date(Speaking):
         total_odd_days = (divisor2 + reminder) % 7
         print("The total no of odd days =", total_odd_days)
         return no_of_odd_days_inyear + total_odd_days
+
+    def No_of_Odd_Days_inMonths(self, month, year, date):
+        if month == 'january':
+            no_of_odd_days_inmonths = date
+        if month == 'february':
+            no_of_odd_days_inmonths = date + 31
+        if month == 'march':
+            no_of_odd_days_inmonths = date + 59
+        if month == 'april':
+            no_of_odd_days_inmonths = date + 90
+        if month == 'may':
+            no_of_odd_days_inmonths = date + 120
+        if month == 'june':
+            no_of_odd_days_inmonths = date + 151
+        if month == 'july':
+            no_of_odd_days_inmonths = date + 181
+        if month == 'august':
+            no_of_odd_days_inmonths = date + 212
+        if month == 'september':
+            no_of_odd_days_inmonths = date + 242
+        if month == 'october':
+            no_of_odd_days_inmonths = date + 273
+        if month == 'november':
+            no_of_odd_days_inmonths = date + 303
+        if month == 'december':
+            no_of_odd_days_inmonths = date + 334
+        if int(year) % 400 == 0 or int(year) % 4 == 0:
+            if month != 'january' and month != 'february':
+                print(type(month))
+                print("Yes it is not Jan , Feb")
+                no_of_odd_days_inmonths = no_of_odd_days_inmonths + 1
+
+            else:
+                pass
+
+        no_of_odd_days_inmonths = no_of_odd_days_inmonths % 7
+        return no_of_odd_days_inmonths
