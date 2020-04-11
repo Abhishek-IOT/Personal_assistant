@@ -60,8 +60,6 @@ class Take_Query(Time, Date):
             elif "jarvis bye" in query:
                 speaking.speak("Bye sir  Have a very good day sir.Take care")
                 exit()
-            elif 'day' in query:
-                date.tellDay()
             elif "which day" in query:
                 speaking.speak("Tell me the date sir")
                 Date_of_the_user = speaking.takeCommand()
@@ -69,6 +67,9 @@ class Take_Query(Time, Date):
                 Month_of_User = speaking.takeCommand()
                 speaking.speak("Now tell me about the year sir")
                 Year_of_the_user = speaking.takeCommand()
+                self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)
+            elif 'day' in query:
+                date.tellDay()
 
             elif 'date' in query:
 
@@ -184,3 +185,13 @@ class Take_Query(Time, Date):
 
                 self.query2(userhour, usermin, time_meridiem)
                 continue
+
+    def check_Date_validity(self, date, Usermonth, year):
+        speakig = Speaking()
+        if int(date) < 0 or int(date) > 31:
+            print("the date is invalid sir")
+            speakig.speak("the date is invalid sir")
+        if len(year) > 4:
+            print(len(year))
+            print("Invalid year sir")
+            speakig.speak("Invalid year sir")
