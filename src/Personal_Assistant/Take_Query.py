@@ -62,7 +62,13 @@ class Take_Query(Time, Date):
                 exit()
             elif 'day' in query:
                 date.tellDay()
-
+            elif "which day" in query:
+                speaking.speak("Tell me the date sir")
+                Date_of_the_user = speaking.takeCommand()
+                speaking.speak("Now tell me about the month sir")
+                Month_of_User = speaking.takeCommand()
+                speaking.speak("Now tell me about the year sir")
+                Year_of_the_user = speaking.takeCommand()
 
             elif 'date' in query:
 
