@@ -68,6 +68,8 @@ class Take_Query(Time, Date):
                 speaking.speak("Now tell me about the year sir")
                 Year_of_the_user = speaking.takeCommand()
                 self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)
+                speaking.speak("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
             elif 'day' in query:
                 date.tellDay()
 
