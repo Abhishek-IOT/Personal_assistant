@@ -4,7 +4,6 @@ import webbrowser
 import wikipedia
 
 from src.Personal_Assistant.Date import Date
-from src.Personal_Assistant.Number_in_hindi import Number_in_hindi
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
 
@@ -16,7 +15,7 @@ class Take_Query(Time, Date):
         speaking.WishMe()
         time = Time()
         date = Date()
-        number = Number_in_hindi()
+
         while (True):
             query = speaking.takeCommand().lower()
             if 'wikipedia' in query:
@@ -27,8 +26,7 @@ class Take_Query(Time, Date):
                 speaking.speak("According to wikipedia Sir")
                 speaking.speak(result)
                 continue
-            elif "Numbers" in query:
-                number.TakeNumber()
+
             elif 'set reminder' in query:
                 self.set_Reminder()
                 continue
