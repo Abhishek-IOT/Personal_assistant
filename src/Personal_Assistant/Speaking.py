@@ -50,3 +50,25 @@ class Speaking():
                 print("Say that again sir")
                 return "None"
             return Query
+
+    def takeCommandHindi(self):
+        # this method is for taking the commands and recognizing the command
+        r = sr.Recognizer()
+        # from the speech_Recognition module we will use the recongizer method for recognizing
+        with sr.Microphone() as source:
+            # from the speech_Recognition module we will use the Microphone module for listening the command
+            print('Listening')
+            r.pause_threshold = 0.7  # seconds of non-speaking audio before a phrase is considered complete
+            audio = r.listen(source)
+            try:
+                print("Recognizing")
+                Query = r.recognize_google(audio, language='hi-In')
+                # for listening the command in indian english
+                print("the query is printed='", Query, "'")
+                # for printing the query or the command that we give
+            except Exception as e:
+                print(
+                    e)  # this method is for handling the exception and so that assistant can ask for telling again the command
+                print("Say that again sir")
+                return "None"
+            return Query
