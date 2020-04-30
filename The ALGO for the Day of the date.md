@@ -1,5 +1,7 @@
-ALGO For the Day of the Date
-
+                                     ALGO For the Day of the Date
+                                     =============================
+                                     
+                                     
 In this I did a Logic that was told by my soft skills sir.
 We have to calculate the no of odds days in the year,month,and days.
 
