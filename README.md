@@ -31,7 +31,7 @@ Speciality of my Personal Assistant is =
  
  
  
- #Hindi Counting feature=
+ # Hindi Counting feature=
 
 
 In this feature i will tell my assistant number in hindi and it will tell me it in English as my hindi counting is not so good.
