@@ -5,6 +5,8 @@ class Number_to_Hindi:
     speaking = Speaking()
 
     def Numbers(self, no):
+        speaking = Speaking()
+
         list1 = {37: 'Setis', 38: 'Adhtis', 39: 'Untaalis', 41: 'Iktalis', 42: 'Byalis', 43: 'Tetalis',
                  44: 'Chavalis', 45: 'Pentalis', 46: 'Chyalis', 47: 'Setalis', 48: 'Adtalis', 49: 'Unachas',
                  57: 'Satavan', 58: 'Athaavan', 59: 'Unsadh', 61: 'Iksadh', 62: 'Baasad', 63: 'Tirsadh', 64: 'Chausadh',
@@ -17,3 +19,6 @@ class Number_to_Hindi:
                  97: 'Sataanave', 98: 'Adhaanavek'}
         if no in list1.keys():
             c = list1[no]
+            speaking.speak("The number is ", c)
+        else:
+            speaking.speak("The number is not there in the list sir")
