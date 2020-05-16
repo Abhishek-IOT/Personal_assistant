@@ -29,6 +29,7 @@ class Take_Query(Time, Date):
                 number = (int)(speaking.takeCommand())
 
                 no.Numbers(number)
+
             if 'wikipedia' in query:
 
                 speaking.speak("Checking in the wikipedia Sir")
