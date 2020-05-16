@@ -15,3 +15,5 @@ class Number_to_Hindi:
                  83: 'Tirasi', 84: 'Chaurasi', 85: 'Pachasi', 86: 'Chiyaasi', 87: 'Sataasi', 88: 'Athasi', 89: 'Nauasi',
                  91: 'Ikyaanave', 92: 'Baanave', 93: 'Tiranave', 94: 'Chauraanave', 95: 'Pachaanave', 96: 'Chiyaanave',
                  97: 'Sataanave', 98: 'Adhaanavek'}
+        if no in list1.keys():
+            c = list1[no]
