@@ -1,4 +1,4 @@
-## Number to hindi
+# Number to hindi
 As in this first I made I List(Dictionary) of the numbers and corresponding to that thing I had values.
 For example:
 37:Setis 
