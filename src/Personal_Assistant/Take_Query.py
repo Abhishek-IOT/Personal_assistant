@@ -25,7 +25,9 @@ class Take_Query(Time, Date):
                 speaking.speak("The number is " + ans)
             if 'number to hindi' in query:
                 no = Number_to_Hindi()
-
+                speaking.speak("tell me the number sir")
+                number = speaking.takeCommand()
+                no.Numbers(number)
             if 'wikipedia' in query:
 
                 speaking.speak("Checking in the wikipedia Sir")
