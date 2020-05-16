@@ -19,6 +19,6 @@ class Number_to_Hindi:
                  97: 'Sataanave', 98: 'Adhaanavek'}
         if no in list1.keys():
             c = list1[no]
-            speaking.speak("The number in hindi is  ", c)
+            speaking.speak("The number in hindi is  " + c)
         else:
             speaking.speak("The number is not there in the list sir")
