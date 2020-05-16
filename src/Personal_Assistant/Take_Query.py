@@ -3,6 +3,7 @@ import webbrowser
 
 import wikipedia
 
+from src.Calculations.Number_to_Hindi import Number_to_Hindi
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
@@ -22,6 +23,8 @@ class Take_Query(Time, Date):
                 speaking.speak("what is the number sir")
                 ans = speaking.takeCommandHindi()
                 speaking.speak("The number is " + ans)
+            if 'number to hindi' in query:
+                no = Number_to_Hindi()
 
             if 'wikipedia' in query:
 
