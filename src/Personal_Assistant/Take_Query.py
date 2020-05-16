@@ -19,7 +19,7 @@ class Take_Query(Time, Date):
 
         while (True):
             query = speaking.takeCommand().lower()
-            if "number" in query:
+            if "number to english" in query:
                 speaking.speak("what is the number sir")
                 ans = speaking.takeCommandHindi()
                 speaking.speak("The number is " + ans)
