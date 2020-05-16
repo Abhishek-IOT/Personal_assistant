@@ -3,26 +3,28 @@ My First Personal Assistant Made by me in Python.Was an exiciting experience and
 It can recognize my voice and it can take my commands as well.
 Speciality of my Personal Assistant is =
   
-  
+  # Wishing Feature=
   1)It will wish me as soon as I can call it.
   For example=for morning it will wish me good morning, sir. 
   and for evening it will wish me good evening , sir. 
   
   
-  
+  # Wiki open Feature=
   2)It will search anything from wikipedia.
   For Example = if i say that I want to search about ICC from wikipedia.
   
+  # Open the browser Feature=
   
   3)It can open webbrowser and any website from my voice command.
   For Example = If I say that Open Google for me and it will open google for me in my computer.
   
+  # Day and Date Feature=
   
   4)It can Also tell that what is today's date,day and about the present time.
   For Example=@)If I say that what is today's date=then it will tell me about the current date 
   @)If I ask it about what is day if the week it will tell me about the day of the week.
   
-  
+  # Alarm=
   
  5)It can also set the reminder for me and remind me on the particular time I set the Reminder.
  For Example=Please set the Reminder at 11:38 A.M
@@ -32,9 +34,10 @@ Speciality of my Personal Assistant is =
  
  
  # Hindi Counting feature=
-
-
 In this feature i will tell my assistant number in hindi and it will tell me it in English as my hindi counting is not so good.
+# From English the hindi number=
+I added this feature as I don't know the number in Hindi so If anyone asks the number in hindi it will take the number in English and 
+Tell the hindi world for it.
  
  
  
