@@ -4,6 +4,7 @@ import webbrowser
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
+from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
@@ -24,6 +25,9 @@ class Take_Query(Time, Date):
                 ans = speaking.takeCommandHindi()
                 speaking.speak("The number is " + ans)
                 continue
+            if "list" in query:
+                making = Making_list()
+                making.List_Making()
             if 'number to hindi' in query:
                 no = Number_to_Hindi()
                 speaking.speak("tell me the number sir")
