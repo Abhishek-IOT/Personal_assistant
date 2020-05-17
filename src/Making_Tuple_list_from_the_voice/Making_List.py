@@ -24,7 +24,7 @@ class Making_list(Speaking):
             query = speaking.takeCommand()
             list1.append(i + 1)
             list1.append(query)
-            speaking.speak((str)(i) + "Element is " + query)
+            speaking.speak((str)(i + 1) + "Element is " + query)
             speaking.speak("do you want to stop adding sir")
             query1 = speaking.takeCommand()
             i = i + 1
