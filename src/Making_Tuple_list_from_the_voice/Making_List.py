@@ -19,12 +19,19 @@ class Making_list(Speaking):
         speaking = Speaking()
         speaking.speak("Tell me the elements sir")
         i = 0
+        list1 = []
         while (True):
             query = speaking.takeCommand()
-            speaking.speak(i + "Element is " + query)
+            list1.append(i + 1)
+            list1.append(query)
+            speaking.speak((str)(i) + "Element is " + query)
             speaking.speak("do you want to stop adding sir")
             query1 = speaking.takeCommand()
+            i = i + 1
+            print("the list=", list1)
             if (query1 == 'yes'):
+                speaking.speak("the final list is sir" + str(list1))
                 break
             else:
+                speaking.speak("The next element is sir")
                 continue
