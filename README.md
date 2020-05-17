@@ -39,7 +39,7 @@ In this feature i will tell my assistant number in hindi and it will tell me it 
 I added this feature as I don't know the number in Hindi so If anyone asks the number in hindi it will take the number in English and 
 Tell the hindi world for it.
  
- 
- 
+# Making List from  my voice command=
+This feature can be used for making the list with the help of assistant and it useful as it can help with sorting of list and at the end tell me the no of elements in the list also.
  
   
