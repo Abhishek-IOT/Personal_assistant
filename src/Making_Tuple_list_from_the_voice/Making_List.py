@@ -31,6 +31,7 @@ class Making_list(Speaking):
             print("the list=", list1)
             if (query1 == 'yes'):
                 speaking.speak("the final list is sir" + str(list1))
+                speaking.speak("Thank you for making the list with help of me sir")
                 break
             else:
                 speaking.speak("The next element is sir")
