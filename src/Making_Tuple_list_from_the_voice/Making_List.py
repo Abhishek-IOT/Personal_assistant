@@ -17,6 +17,7 @@ class Making_list(Speaking):
 
     def List_Making_Do_not_have_No(self):
         speaking = Speaking()
+        speaking.speak("Tell me the elements sir")
         i = 0
         while (True):
             query = speaking.takeCommand()
