@@ -26,8 +26,14 @@ class Take_Query(Time, Date):
                 speaking.speak("The number is " + ans)
                 continue
             if "list" in query:
-                making = Making_list()
-                making.List_Making()
+                speaking.speak("Do you know the number of elements to be added sir")
+                query1 = speaking.takeCommand()
+                if (query1 == 'yes'):
+                    making = Making_list()
+                    making.List_Making()
+                else:
+                    making = Making_list()
+                    making.List_Making_Do_not_have_No()
             if 'number to hindi' in query:
                 no = Number_to_Hindi()
                 speaking.speak("tell me the number sir")
