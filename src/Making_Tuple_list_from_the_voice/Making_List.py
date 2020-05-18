@@ -1,3 +1,5 @@
+import pandas as pd
+
 from src.Personal_Assistant.Speaking import Speaking
 
 
@@ -31,11 +33,17 @@ class Making_list(Speaking):
             print("the list=", list1)
             if (query1 == 'yes'):
                 speaking.speak("the final list is sir" + str(list1))
-                speaking.speak("Thank you for making the list with help of me sir")
+                df = pd.DataFrame(list1)
+                df.to_csv('filename.csv', index=False)
+                speaking.speak(
+                    "Thank you for making the list with help of me sir and I converting the list to csv file sir")
+
                 speaking.speak("Do you want to know the number of elements in the list sir")
                 take = speaking.takeCommand()
                 if (take == 'yes'):
-                    speaking.speak(list1[list1.__len__() - 1])
+                    speaking.speak(list1[(list1.__len__()) - 2])
+                    print(list1.__len__())
+
                 else:
                     speaking.speak("thank you sir")
                 break
