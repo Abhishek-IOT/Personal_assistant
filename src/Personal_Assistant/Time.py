@@ -19,7 +19,7 @@ class Time(Speaking):
         min = time[14:16]
         print("The time is sir" + hour + "Hours and" + min + "Minutes")
         Speaking.speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
-
+        return hour, min
     def songs(self):
         Speaking.speak(self, "the reminder that u said is now sir")
         music = 'D:\\Music'

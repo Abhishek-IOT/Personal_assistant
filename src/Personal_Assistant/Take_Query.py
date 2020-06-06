@@ -4,7 +4,6 @@ import webbrowser
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
-from src.Graphic_User_Interface.GUI import GUI
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
@@ -18,8 +17,6 @@ class Take_Query(Time, Date):
         speaking.WishMe()
         time = Time()
         date = Date()
-        gui = GUI()
-        gui.Graphics()
 
         while (True):
             query = speaking.takeCommand().lower()
