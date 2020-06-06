@@ -58,44 +58,7 @@ class Take_Query(Time, Date):
             print("The current min  " + hour + "       " + min)
             if (hour != userhour or min != usermin):
                 query = speaking.takeCommand().lower()
-                if 'wikipedia' in query:
-                    print(userhour)
-                    speaking.speak("Checking in the wikipedia Sir")
-                    query = query.replace("wikipedia", "")
-                    result = wikipedia.summary(query, sentences=4)
-                    speaking.speak("According to wikipedia Sir")
-                    speaking.speak(result)
-                    continue
-                elif 'set reminder' in query:
-                    self.set_Reminder()
-                    continue
-                elif 'open youtube' in query:
-                    speaking.speak("Opening the youtube sir")
-                    webbrowser.open("www.youtube.com")
-                    continue
-                elif 'open google' in query:
-                    speaking.speak("Opening the google sir")
-                    webbrowser.open("google.com")
-                    continue
-                elif 'open facebook' in query:
-                    speaking.speak("Opening facebook sir")
-                    webbrowser.open("facebook.com")
-                    continue
-                elif 'open geeksforgeeks' in query:
-                    speaking.speak("Opening geeks for geeks sir")
-                    webbrowser.open("geeksforgeeks.com")
-                    continue
-                elif 'open the news' in query:
-                    speaking.speak("Telling about the news sir")
-                    webbrowser.open("https://www.indiatvnews.com/")
-                    continue  # speak(webbrowser.open("https://www.indiatvnews.com/"))
-                elif 'open online classes' in query:
-                    speaking.speak("Opening the cousresite.com sir")
-                    webbrowser.open("https://blackboard.coursesites.com/")
-                    speaking.speak("Goodluck sir for studies")
-                    continue
-                elif 'day' in query:
-                    date.tellDay()
+                self.all_the_queries(query)
 
 
             else:
