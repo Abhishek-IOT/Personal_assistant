@@ -171,7 +171,7 @@ class Take_Query(Time, Date):
             speaking.speak("Opening the youtube sir")
             webbrowser.open("www.youtube.com")
 
-        elif 'open google' in query:
+        elif 'open Google' in query:
             speaking.speak("Opening the google sir")
             webbrowser.open("google.com")
 
@@ -194,7 +194,7 @@ class Take_Query(Time, Date):
             speaking.speak("Goodluck sir for studies")
 
         elif 'time' in query:
-            time.tellTime()
+            time.tellTime(counter=1)
 
         elif "jarvis bye" in query:
             speaking.speak("Bye sir  Have a very good day sir.Take care")
