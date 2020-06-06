@@ -20,12 +20,8 @@ class Take_Query(Time, Date):
 
         while (True):
             query = speaking.takeCommand().lower()
-            if "bye" in query:
-                speaking.speak("Have a good day ahead sir")
-                exit()
-            else:
-                self.all_the_queries(query)
-                continue
+            self.all_the_queries(query)
+            continue
 
     def query2(self, userhour, usermin, time_merdiem):
         speaking = Speaking()
