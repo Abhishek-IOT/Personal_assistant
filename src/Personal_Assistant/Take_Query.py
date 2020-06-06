@@ -20,99 +20,11 @@ class Take_Query(Time, Date):
 
         while (True):
             query = speaking.takeCommand().lower()
-
-            if "number to english" in query:
-                speaking.speak("what is the number sir")
-                ans = speaking.takeCommandHindi()
-                speaking.speak("The number is " + ans)
-                continue
-            if "list" in query:
-                speaking.speak("Do you know the number of elements to be added sir")
-                query1 = speaking.takeCommand()
-                if (query1 == 'yes'):
-                    making = Making_list()
-                    making.List_Making()
-                else:
-                    making = Making_list()
-                    making.List_Making_Do_not_have_No()
-            if 'number to hindi' in query:
-                no = Number_to_Hindi()
-                speaking.speak("tell me the number sir")
-                number = (int)(speaking.takeCommand())
-
-                no.Numbers(number)
-                continue
-            if 'wikipedia' in query:
-
-                speaking.speak("Checking in the wikipedia Sir")
-                query = query.replace("wikipedia", "")
-                result = wikipedia.summary(query, sentences=4)
-                speaking.speak("According to wikipedia Sir")
-                speaking.speak(result)
-                continue
-
-            elif 'set reminder' in query:
-                self.set_Reminder()
-                continue
-
-            elif 'open youtube' in query:
-                speaking.speak("Opening the youtube sir")
-                webbrowser.open("www.youtube.com")
-                continue
-            elif 'open google' in query:
-                speaking.speak("Opening the google sir")
-                webbrowser.open("google.com")
-                continue
-            elif 'open facebook' in query:
-                speaking.speak("Opening facebook sir")
-                webbrowser.open("facebook.com")
-                continue
-            elif 'open geeksforgeeks' in query:
-                speaking.speak("Opening geeks for geeks sir")
-                print("Opening geeksforgeeks Sir")
-                webbrowser.open("geeksforgeeks.org")
-                continue
-            elif 'open the news' in query:
-                speaking.speak("Telling about the news sir")
-                webbrowser.open("https://www.indiatvnews.com/")
-                continue  # speak(webbrowser.open("https://www.indiatvnews.com/"))
-            elif 'open online classes' in query:
-                speaking.speak("Opening the cousresite.com sir")
-                webbrowser.open("https://blackboard.coursesites.com/")
-                speaking.speak("Goodluck sir for studies")
-                continue
-            elif 'time' in query:
-                time.tellTime()
-                continue
-            elif "jarvis bye" in query:
-                speaking.speak("Bye sir  Have a very good day sir.Take care")
+            if "bye" in query:
+                speaking.speak("Have a good day ahead sir")
                 exit()
-            elif "which day" in query:
-                speaking.speak("Tell me the date sir")
-                Date_of_the_user = speaking.takeCommand().strip()
-                speaking.speak("Now tell me about the month sir")
-                Month_of_User = speaking.takeCommand().lower().strip()
-
-                speaking.speak("Now tell me about the year sir")
-                Year_of_the_user = speaking.takeCommand().strip()
-                Hello = date.No_of_odd_days_in_year(Year_of_the_user)
-                Hello2 = date.No_of_Odd_Days_inMonths(Month_of_User, Year_of_the_user, Date_of_the_user)
-                print(Hello2)
-                days = (Hello2 + Hello) % 7
-
-                if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)):
-                    speaking.speak(
-                        "According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
-                    print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
-                    self.tell_days(days)
-                else:
-                    print("Soryy")
-            elif 'day' in query:
-                date.tellDay()
-
-            elif 'date' in query:
-
-                date.telldate()
+            else:
+                self.all_the_queries(query)
                 continue
 
     def query2(self, userhour, usermin, time_merdiem):
@@ -259,3 +171,100 @@ class Take_Query(Time, Date):
             days = dict_day[days]
             #  print(dict_day[days])
             Speaking.speak(self, "The days is " + days)
+
+    def all_the_queries(self, query):
+        speaking = Speaking()
+        date = Date()
+        time = Time()
+        if "number to english" in query:
+            speaking.speak("what is the number sir")
+            ans = speaking.takeCommandHindi()
+            speaking.speak("The number is " + ans)
+
+        if "list" in query:
+            speaking.speak("Do you know the number of elements to be added sir")
+            query1 = speaking.takeCommand()
+            if (query1 == 'yes'):
+                making = Making_list()
+                making.List_Making()
+            else:
+                making = Making_list()
+                making.List_Making_Do_not_have_No()
+        if 'number to hindi' in query:
+            no = Number_to_Hindi()
+            speaking.speak("tell me the number sir")
+            number = (int)(speaking.takeCommand())
+
+            no.Numbers(number)
+
+        if 'wikipedia' in query:
+
+            speaking.speak("Checking in the wikipedia Sir")
+            query = query.replace("wikipedia", "")
+            result = wikipedia.summary(query, sentences=4)
+            speaking.speak("According to wikipedia Sir")
+            speaking.speak(result)
+
+
+        elif 'set reminder' in query:
+            self.set_Reminder()
+
+
+        elif 'open youtube' in query:
+            speaking.speak("Opening the youtube sir")
+            webbrowser.open("www.youtube.com")
+
+        elif 'open google' in query:
+            speaking.speak("Opening the google sir")
+            webbrowser.open("google.com")
+
+        elif 'open facebook' in query:
+            speaking.speak("Opening facebook sir")
+            webbrowser.open("facebook.com")
+
+        elif 'open geeksforgeeks' in query:
+            speaking.speak("Opening geeks for geeks sir")
+            print("Opening geeksforgeeks Sir")
+            webbrowser.open("geeksforgeeks.org")
+
+        elif 'open the news' in query:
+            speaking.speak("Telling about the news sir")
+            webbrowser.open("https://www.indiatvnews.com/")
+            # speak(webbrowser.open("https://www.indiatvnews.com/"))
+        elif 'open online classes' in query:
+            speaking.speak("Opening the cousresite.com sir")
+            webbrowser.open("https://blackboard.coursesites.com/")
+            speaking.speak("Goodluck sir for studies")
+
+        elif 'time' in query:
+            time.tellTime()
+
+        elif "jarvis bye" in query:
+            speaking.speak("Bye sir  Have a very good day sir.Take care")
+            exit()
+        elif "which day" in query:
+            speaking.speak("Tell me the date sir")
+            Date_of_the_user = speaking.takeCommand().strip()
+            speaking.speak("Now tell me about the month sir")
+            Month_of_User = speaking.takeCommand().lower().strip()
+
+            speaking.speak("Now tell me about the year sir")
+            Year_of_the_user = speaking.takeCommand().strip()
+            Hello = date.No_of_odd_days_in_year(Year_of_the_user)
+            Hello2 = date.No_of_Odd_Days_inMonths(Month_of_User, Year_of_the_user, Date_of_the_user)
+            print(Hello2)
+            days = (Hello2 + Hello) % 7
+
+            if (self.check_Date_validity(Date_of_the_user, Month_of_User, Year_of_the_user)):
+                speaking.speak(
+                    "According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                print("According to you th date is sir" + Date_of_the_user + Month_of_User + Year_of_the_user)
+                self.tell_days(days)
+            else:
+                print("Soryy")
+        elif 'day' in query:
+            date.tellDay()
+
+        elif 'date' in query:
+
+            date.telldate()
