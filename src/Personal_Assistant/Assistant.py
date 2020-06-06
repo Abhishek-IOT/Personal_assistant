@@ -17,6 +17,7 @@ from src.Personal_Assistant.Take_Query import Take_Query
 
 class Assistant:
     if __name__ == '__main__':  # main method for executing the functions
+
         takequery = Take_Query()
         takequery.query()
 

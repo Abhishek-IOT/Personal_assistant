@@ -14,10 +14,10 @@ class Time(Speaking):
 
     def tellTime(self):
         time = str(datetime.datetime.now())
-        print(time)
+
         hour = time[11:13]
         min = time[14:16]
-
+        print("The time is sir" + hour + "Hours and" + min + "Minutes")
         Speaking.speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
 
     def songs(self):
