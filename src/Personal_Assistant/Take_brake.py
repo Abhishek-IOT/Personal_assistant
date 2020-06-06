@@ -3,7 +3,7 @@ from src.Personal_Assistant.Take_Query import Take_Query
 from src.Personal_Assistant.Time import Time
 
 
-class Take_brake:
+class Take_break:
     speaking = Speaking()
     take_query = Take_Query()
     time = Time()
