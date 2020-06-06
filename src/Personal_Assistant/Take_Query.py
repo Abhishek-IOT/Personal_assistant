@@ -55,8 +55,6 @@ class Take_Query(Time, Date):
             if (hour != userhour or min != usermin):
                 query = speaking.takeCommand().lower()
                 self.all_the_queries(query)
-
-
             else:
                 print("this is alarm time sir")
                 speaking.speak("Alarm time sir")

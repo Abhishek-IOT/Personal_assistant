@@ -1,9 +1,11 @@
-from src.Personal_Assistant import Speaking
+from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Take_Query import Take_Query
 from src.Personal_Assistant.Time import Time
 
 
 class Take_brake:
+    speaking = Speaking()
+    take_query = Take_Query()
     time = Time()
     query = time.tellTime()
     # one_hour_later=(int)(query[0])+1
@@ -20,4 +22,13 @@ class Take_brake:
         print(min)
         if min_later == min:
             print("Break Time sir")
-            Speaking.speak("Break Time sir")
+            speaking.speak("Break Time sir")
+            break
+        else:
+            query = speaking.takeCommand()
+            take_query.all_the_queries(query)
+            continue
+
+
+if __name__ == '__main__':
+    Take_brake()
