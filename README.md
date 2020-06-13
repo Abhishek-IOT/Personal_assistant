@@ -44,5 +44,6 @@ This feature can be used for making the list with the help of assistant and it u
  
 # Notification of taking break after every 45 min of continuously using the device=
 My eyes were affected by using the laptop for so long hours so I added this feature that will remind me of taking the break.
-![](C:/Users/Dell/Pictures/Screenshots/reminder)
+        ![](![Screenshot (5)](https://user-images.githubusercontent.com/53862677/84569471-748f1f80-ada4-11ea-9b50-48aae16ac624.png)
+
 
