@@ -42,4 +42,7 @@ Tell the hindi world for it.
 # Making List from  my voice command=
 This feature can be used for making the list with the help of assistant and it useful as it can help with sorting of list and at the end tell me the no of elements in the list also.
  
-  
+# Notification of taking break after every 45 min of continuously using the device=
+My eyes were affected by using the laptop for so long hours so I added this feature that will remind me of taking the break.
+![](C:\Users\Dell\Pictures\Screenshots\reminder)
+
