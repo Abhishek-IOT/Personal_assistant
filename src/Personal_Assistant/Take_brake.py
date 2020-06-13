@@ -11,7 +11,7 @@ class Take_brake():
     time = Time()
     speaking.WishMe()
     query = time.tellTime(1)
-    min_later = (int)(query[1]) + 45
+    min_later = (int)(query[1]) + 1
 
     if min_later >= 60:
         min_later = min_later - 60
