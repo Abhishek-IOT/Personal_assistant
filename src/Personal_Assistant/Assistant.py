@@ -13,12 +13,12 @@ Personal Assistant project
 # importing the wikipedia module for having a search from wikipedia
 
 from src.Personal_Assistant.Take_Query import Take_Query
-from src.Personal_Assistant.Take_brake import Take_break
+from src.Personal_Assistant.Take_brake import Take_brake
 
 
 class Assistant:
     if __name__ == '__main__':  # main method for executing the functions
-        take_break = Take_break()
+        take = Take_brake()
         takequery = Take_Query()
         takequery.query()
 
