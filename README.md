@@ -47,3 +47,6 @@ My eyes were affected by using the laptop for so long hours so I added this feat
         ![](![Screenshot (5)](https://user-images.githubusercontent.com/53862677/84569471-748f1f80-ada4-11ea-9b50-48aae16ac624.png)
 
 
+# Displaying the Digital clock when the you ask for time is the new Feature=
+![image](https://user-images.githubusercontent.com/53862677/85215924-7c4e5580-b39c-11ea-9967-f09bb23964f3.png)
+This GUI will occur as soon I will ask for time.It is made for more convinence.
