@@ -6,7 +6,7 @@ class Digital_clock:
     def __init__(self, window):
         self.window = window
         self.window.title('Digital clock')
-        self.clock_Label = tk.Label(self.window, font='ariel 80', bg='white', fg='red')
+        self.clock_Label = tk.Label(self.window, font='ariel 80', bg='blu', fg='white')
         self.clock_Label.grid(row=0, column=1)
         self.display_the_time()
 
