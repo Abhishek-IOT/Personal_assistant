@@ -1,9 +1,11 @@
 import datetime
+import tkinter as tk
 import webbrowser
 
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
+from src.Graphic_User_Interface.Stopwatch import Digital_clock
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
@@ -195,6 +197,10 @@ class Take_Query(Time, Date):
 
         elif 'time' in query:
             time.tellTime(counter=1)
+            mywindow = tk.Tk()
+            clock = Digital_clock(mywindow)
+            mywindow.mainloop()
+
 
         elif "jarvis bye" in query:
             speaking.speak("Bye sir  Have a very good day sir.Take care")
