@@ -5,7 +5,7 @@ import webbrowser
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
-from src.Graphic_User_Interface.Stopwatch import Digital_clock
+from src.Graphic_User_Interface import Digital_clock, Stopwatch
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
@@ -202,7 +202,7 @@ class Take_Query(Time, Date):
             mywindow.mainloop()
 
 
-        elif "jarvis bye" in query:
+        elif "bye" in query:
             speaking.speak("Bye sir  Have a very good day sir.Take care")
             exit()
         elif "which day" in query:
@@ -227,7 +227,7 @@ class Take_Query(Time, Date):
                 print("Soryy")
         elif 'day' in query:
             date.tellDay()
-
         elif 'date' in query:
-
             date.telldate()
+        elif 'stopwatch' in query:
+            stop = Stopwatch()
