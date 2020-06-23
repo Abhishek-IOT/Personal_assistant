@@ -5,7 +5,8 @@ import webbrowser
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
-from src.Graphic_User_Interface import Digital_clock, Stopwatch
+from src.Graphic_User_Interface import Digital_clock
+from src.Graphic_User_Interface.Stopwatch import Stopwatch
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking

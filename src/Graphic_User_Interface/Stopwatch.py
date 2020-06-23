@@ -1,10 +1,10 @@
 from tkinter import *
 
-global count
-count = 0
-
 
 class Stopwatch:
+    global count
+    count = 0
+
     def reset(self):
         global count
         count = 1
@@ -64,6 +64,3 @@ class Stopwatch:
         self.but2.place(x=255, y=100)
         self.but3.place(x=370, y=100)
         self.root.mainloop()
-
-
-a = Stopwatch()

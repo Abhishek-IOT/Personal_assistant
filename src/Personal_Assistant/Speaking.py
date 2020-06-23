@@ -27,7 +27,7 @@ class Speaking():
             pyttsx3.speak("Good afternoon sir")
         else:
             pyttsx3.speak('Good evening sir')
-        pyttsx3.speak('I am Jarvis   .Please tell how may I help u Sir')
+        pyttsx3.speak('I am Yeeeear .Please tell how may I help u Sir')
 
     def takeCommand(self):
         # this method is for taking the commands and recognizing the command
