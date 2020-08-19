@@ -1,5 +1,6 @@
 import datetime
-
+from tkinter import *
+from tkinter import ttk
 import pyttsx3
 import speech_recognition as sr
 

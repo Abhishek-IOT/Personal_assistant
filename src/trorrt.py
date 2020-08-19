@@ -69,14 +69,17 @@ class Stopwatch:
         self.but3.place(x=370, y=100)
         self.but4.place(x=450,y=100)
         self.root.mainloop()
-    def query(self):
-        speaking = Speaking()
-        speaking.WishMe()
-
-        take= Take_Query()
-        while (True):
-            query = speaking.takeCommand().lower()
-            take.all_the_queries(query)
-            continue
-
-
+    # def query(self):
+    #     speaking = Speaking()
+    #     speaking.WishMe()
+    #
+    #     take= Take_Query()
+    #     while (True):
+    #         query = speaking.takeCommand().lower()
+    #      #   take.all_the_queries(query)
+    #         if "start" in query:
+    #             self.start_time()
+    #             speaking.speak("Starting the Stopwatch sir")
+    #
+if __name__ == '__main__':
+    Stopwatch()

@@ -5,8 +5,8 @@ import webbrowser
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
-from src.Graphic_User_Interface import Digital_clock
-from src.Graphic_User_Interface.Stopwatch import Stopwatch
+from src.Graphic_User_Interface.Digital_clock import Digital_clock
+
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
@@ -18,6 +18,7 @@ class Take_Query(Time, Date):
     def query(self):
         speaking = Speaking()
         speaking.WishMe()
+        speaking.Graphics()
         time = Time()
         date = Date()
 
@@ -25,6 +26,8 @@ class Take_Query(Time, Date):
             query = speaking.takeCommand().lower()
             self.all_the_queries(query)
             continue
+
+
 
     def query2(self, userhour, usermin, time_merdiem):
         speaking = Speaking()
@@ -198,9 +201,10 @@ class Take_Query(Time, Date):
 
         elif 'time' in query:
             time.tellTime(counter=1)
-            mywindow = tk.Tk()
-            clock = Digital_clock(mywindow)
-            mywindow.mainloop()
+            # mywindow = tk.Tk()
+            # clock = Digital_clock(mywindow)
+            # mywindow.mainloop()
+
 
 
         elif "bye" in query:
@@ -230,5 +234,3 @@ class Take_Query(Time, Date):
             date.tellDay()
         elif 'date' in query:
             date.telldate()
-        elif 'stopwatch' in query:
-            stop = Stopwatch()
