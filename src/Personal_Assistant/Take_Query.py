@@ -6,7 +6,7 @@ import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
 from src.Graphic_User_Interface.Digital_clock import Digital_clock
-
+from src.Personal_Assistant import Battery
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
@@ -204,7 +204,8 @@ class Take_Query(Time, Date):
             # mywindow = tk.Tk()
             # clock = Digital_clock(mywindow)
             # mywindow.mainloop()
-
+        elif 'battery update' in query:
+            Battery()
 
 
         elif "bye" in query:
