@@ -11,14 +11,11 @@ Personal Assistant project
 # import pyttsx3
 # for taking the voice from the window and the laptop
 # importing the wikipedia module for having a search from wikipedia
-from src.Graphic_User_Interface.Stopwatch import Stopwatch
+
 from src.Personal_Assistant.Take_Query import Take_Query
-from src.Personal_Assistant.Take_brake import Take_brake
 
 
 class Assistant:
     if __name__ == '__main__':  # main method for executing the functions
-         take = Take_brake()
-         Take_Query().query()
-
-
+        take = Take_Query()
+        take.query()

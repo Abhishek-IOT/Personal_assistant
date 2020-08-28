@@ -1,17 +1,16 @@
 import datetime
-import tkinter as tk
 import webbrowser
 
 import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
-from src.Graphic_User_Interface.Digital_clock import Digital_clock
-from src.Personal_Assistant import Battery
 from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
+from src.Personal_Assistant import Battery
+from src.Personal_Assistant import Setting_control
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
-from src.Personal_Assistant import Setting_control
+
 
 class Take_Query(Time, Date):
 
@@ -204,10 +203,6 @@ class Take_Query(Time, Date):
             # mywindow = tk.Tk()
             # clock = Digital_clock(mywindow)
             # mywindow.mainloop()
-        elif 'battery update' in query:
-            Battery()
-
-
         elif "bye" in query:
             speaking.speak("Bye sir  Have a very good day sir.Take care")
             exit()
@@ -238,3 +233,5 @@ class Take_Query(Time, Date):
         elif 'shutdown the computer' in query:
             speaking.speak("Shutting down the computer Sir")
             Setting_control()
+        elif "battery update" in query:
+            Battery()
