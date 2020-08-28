@@ -6,13 +6,13 @@ from plyer import notification
 from src.Personal_Assistant.Speaking import Speaking
 
 
-class Battery():
+class Battery:
     battery = psutil.sensors_battery()
 
     speaking = Speaking()
 
     # from psutil we will import the sensors_battery class and with that we have the battery remaining
-    while (True):
+    while True:
         percent = battery.percent
         #        print("the battery percentage is "+percent)
         speaking.speak("the battery percentage is " + str(percent))
