@@ -5,12 +5,12 @@ import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
 # from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
-from src.Personal_Assistant import Settingcontrol
+from src.Personal_Assistant import settingControl
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Open import Open
-from src.Personal_Assistant.Settingcontrol import Settingcontrol
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
+from src.Personal_Assistant.settingControl import settingControl
 
 
 class Take_Query(Time, Date):
@@ -233,7 +233,7 @@ class Take_Query(Time, Date):
             date.telldate()
         elif 'shutdown' in query:
             speaking.speak("Shutting down the computer Sir")
-            Settingcontrol()
+            settingControl()
         # elif "battery update" in query:
         #     Battery()
         elif "Open drive" in query:

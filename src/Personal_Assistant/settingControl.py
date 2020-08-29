@@ -3,7 +3,7 @@ import os
 from src.Personal_Assistant.Speaking import Speaking
 
 
-class Settingcontrol:
+class settingControl:
     speaking = Speaking()
     speaking.speak("Do you want to shutdown the computer")
     input_choice = speaking.takeCommand()
