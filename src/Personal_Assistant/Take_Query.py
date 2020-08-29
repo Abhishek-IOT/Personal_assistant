@@ -5,9 +5,10 @@ import wikipedia
 
 from src.Calculations.Number_to_Hindi import Number_to_Hindi
 # from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
-from src.Personal_Assistant import Setting_control
+from src.Personal_Assistant import Settingcontrol
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Open import Open
+from src.Personal_Assistant.Settingcontrol import Settingcontrol
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
 
@@ -17,7 +18,7 @@ class Take_Query(Time, Date):
     def query(self):
         speaking = Speaking()
         speaking.WishMe()
-        speaking.Graphics()
+        #        speaking.Graphics()
         time = Time()
         date = Date()
 
@@ -230,9 +231,9 @@ class Take_Query(Time, Date):
             date.tellDay()
         elif 'date' in query:
             date.telldate()
-        elif 'shutdown the computer' in query:
+        elif 'shutdown' in query:
             speaking.speak("Shutting down the computer Sir")
-            Setting_control()
+            Settingcontrol()
         # elif "battery update" in query:
         #     Battery()
         elif "Open drive" in query:
