@@ -14,5 +14,3 @@ class Reading:
     speak.runAndWait()
 
 
-if __name__ == '__main__':
-    Reading()

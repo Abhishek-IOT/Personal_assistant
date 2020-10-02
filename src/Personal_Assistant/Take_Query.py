@@ -8,6 +8,7 @@ from src.Calculations.Number_to_Hindi import Number_to_Hindi
 # from src.Personal_Assistant import settingControl
 from src.Personal_Assistant.Date import Date
 from src.Personal_Assistant.Open import Open
+from src.Personal_Assistant.Reading import Reading
 from src.Personal_Assistant.Speaking import Speaking
 from src.Personal_Assistant.Time import Time
 from src.Personal_Assistant.control import control
@@ -241,3 +242,5 @@ class Take_Query(Time, Date):
         #     Battery()
         elif "Open drive" in query:
             Open()
+        elif "I want to read" in query:
+            Reading()
