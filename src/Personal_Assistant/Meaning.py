@@ -12,4 +12,4 @@ class Meaning:
     print(len(word))
     for states in word:
         print(word[states])
-        speak.speak(word[states])
+        speak.speak("the meaning  is" + str(word[states]))
