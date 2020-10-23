@@ -7,6 +7,7 @@ from src.Calculations.Number_to_Hindi import Number_to_Hindi
 # from src.Making_Tuple_list_from_the_voice.Making_List import Making_list
 # from src.Personal_Assistant import settingControl
 from src.Personal_Assistant.Date import Date
+from src.Personal_Assistant.Meaning import Meaning
 from src.Personal_Assistant.Open import Open
 from src.Personal_Assistant.Reading import Reading
 from src.Personal_Assistant.Speaking import Speaking
@@ -244,3 +245,5 @@ class Take_Query(Time, Date):
             Open()
         elif "I want to read" in query:
             Reading()
+        elif "tell meaning" in query:
+            Meaning()
