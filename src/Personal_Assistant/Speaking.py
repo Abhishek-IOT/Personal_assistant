@@ -1,10 +1,9 @@
 import datetime
-from tkinter import *
-from tkinter import ttk
+
 import pyttsx3
 import speech_recognition as sr
 
-
+global var
 class Speaking():
     def __int__(self):
         pass
@@ -36,10 +35,12 @@ class Speaking():
         # from the speech_Recognition module we will use the recongizer method for recognizing
         with sr.Microphone() as source:
             # from the speech_Recognition module we will use the Microphone module for listening the command
+            var.set("Listening")
             print('Listening')
             r.pause_threshold = 0.7  # seconds of non-speaking audio before a phrase is considered complete
             audio = r.listen(source)
             try:
+                var.set("Recognizing")
                 print("Recognizing")
                 Query = r.recognize_google(audio, language='en-in')
                 # for listening the command in indian english
@@ -50,6 +51,7 @@ class Speaking():
                     e)  # this method is for handling the exception and so that assistant can ask for telling again the command
                 print("Say that again sir")
                 return "None"
+            var.set(Query)
             return Query
 
     def takeCommandHindi(self):
